@@ -1,0 +1,374 @@
+:root {
+  color-scheme: light dark;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+  scroll-padding: var(--scroll-padding, 10em);
+}
+body {
+  background-color: light-dark(#fffafa, #080014);
+  /* background: linear-gradient(45deg, rgba(255, 0, 123, 0.08) 0%, rgb(255, 0, 123) 50%, rgba(255, 0, 123, 0.08) 100%); */
+}
+.container {
+  width: 80%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.navbar {
+  width: 100%;
+  height: 150px;
+  display: flex;
+}
+.logo {
+  width: 50%;
+  display: flex;
+  background-color: pink;
+  align-items: center;
+  padding: 0 2em;
+  z-index: 999;
+  border-radius: 0 0px 20em 0;
+}
+.logo img {
+  display: block;
+  max-width: 100px;
+  border-radius: 50%;
+}
+.menu {
+  position: fixed;
+  height: 150px;
+  display: flex;
+  justify-self: end;
+  align-items: center;
+  direction: rtl;
+  width: 100%;
+  padding: 0 2em;
+  background-color: rgba(255, 0, 123, 0);
+  z-index: 100;
+  backdrop-filter: blur(1em);
+}
+.menu ul li {
+  list-style: none;
+  margin: 0.5em 0;
+}
+.menu ul li a {
+  color: light-dark(#080014, #bbfd04);
+  text-decoration: none;
+}
+.menu ul li a:hover {
+  color: light-dark(#f60461, #bbfd04);
+  text-decoration: line-through;
+  font-weight: bold;
+}
+.menu ul li a.active {
+  font-weight: bold;
+  color: light-dark(#fd8686, #bbfd04);
+  text-decoration: line-through;
+}
+.heading {
+  max-width: 500px;
+  text-align: center;
+  margin: 2.5rem auto;
+  color: light-dark(#080014, #fffafa);
+  font-size: 1.5em;
+  word-spacing: 0.1em;
+  letter-spacing: 0.1em;
+  line-height: 1.5em;
+  font-weight: bold;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  text-transform: uppercase;
+}
+.hero {
+  position: relative;
+  width: 90%;
+  margin: 2rem auto;
+  height: 400px;
+  background-color: pink;
+  background-image: url(image/cartoon.jpg);
+  background-size: cover;
+  background-position: center;
+}
+@property --angle {
+  syntax: '<angle>';
+  inherits: true;
+  initial-value: 0deg;
+}
+.hero::before,
+.hero::after {
+  content: 'before';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  background-color: pink;
+  border-radius: inherit;
+  --angle: 0deg;
+  background-image: conic-gradient(from var(--angle), #bbfd04, #f60461, rgb(142, 67, 247));
+  animation: autoRotate 5s linear infinite;
+  padding: 20px;
+  z-index: -1;
+  box-sizing: border-box;
+}
+.hero::after {
+  filter: blur(8px);
+}
+@keyframes autoRotate {
+  to {
+    --angle: 360deg;
+  }
+}
+footer {
+  max-width: 100%;
+  height: max-content;
+  padding: 3rem 0;
+  text-align: center;
+  border-top: 1px solid #fd8686;
+}
+.subtext {
+  display: flex;
+  justify-content: center;
+  color: light-dark(#080014, #fffafa);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 2em;
+}
+.info {
+  display: flex;
+  width: 100%;
+  margin-bottom: 4rem;
+}
+.newsletter {
+  width: 50%;
+  align-self: center;
+}
+.newsletter form input,
+.newsletter form button {
+  width: 50%;
+  height: 50px;
+  border-radius: 10px;
+  border: none;
+  margin: 0 5px;
+  padding: 0 2em;
+  background-color: #fffafa;
+  color: #080014;
+  font-size: 16px;
+  border: 2px solid #ccc;
+}
+.newsletter form button {
+  width: 20%;
+  background-color: rgb(54, 54, 255);
+  color: #fffafa;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+}
+.newsletter form button:hover {
+  background-color: rgb(24, 24, 250);
+}
+.socmed {
+  width: 50%;
+  align-self: center;
+}
+.socmed a {
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 14px;
+  text-decoration: none;
+  color: light-dark(#080014, #fffafa);
+}
+.socmed a:hover {
+  color: #fd8686;
+}
+.socmed ul li {
+  list-style: none;
+  padding: 0.2em 0;
+}
+
+/* ============== Portfolio ============== */
+
+h1 {
+  position: relative;
+  display: inline-block;
+  text-transform: uppercase;
+  font-size: 2em;
+  font-weight: bold;
+  margin: 2em 0;
+  letter-spacing: 0.2em;
+}
+h1:before {
+  content: '';
+  width: 50%;
+  border-radius: 20px;
+  height: 0.1em;
+  background-color: #bbfd04;
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  transform: translateY(-50%);
+}
+
+.card-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-bottom: 2.5em;
+}
+.cards {
+  position: relative;
+  width: 45%;
+  height: 400px;
+  margin: 1.5em 0;
+  background-color: #f60461;
+  /* overflow: hidden; */
+}
+.cards .title {
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 0.2em;
+  text-align: center;
+  align-content: center;
+  font-size: large;
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  bottom: -100%;
+  color: #bbfd04;
+  background-color: rgba(5, 0, 35, 0.725);
+  line-height: 2em;
+}
+.image {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.cards:hover .title {
+  bottom: 0;
+  transition: all 0.3s linear;
+  cursor: pointer;
+}
+.cards::before,
+.cards::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  background-color: pink;
+  border-radius: inherit;
+  --angle: 0deg;
+  background-image: conic-gradient(from var(--angle), #bbfd04, #f60461, rgb(142, 67, 247));
+  animation: autoRotate 5s linear infinite;
+  padding: 1px;
+  z-index: -1;
+}
+.hero::after {
+  filter: blur(10px);
+}
+
+/* ================= About ================= */
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  gap: 3em;
+  flex-shrink: 0;
+  margin-bottom: 3em;
+}
+.side-left {
+  width: 60%;
+}
+.side-left h2,
+.fs {
+  font-size: 2.5em;
+  text-transform: uppercase;
+  font-family: 'Cherry Bomb One', system-ui;
+  letter-spacing: 0.1em;
+}
+.fs {
+  color: #bbfd04;
+  display: inline-block;
+  margin-bottom: 0.5em;
+}
+.side-left p {
+  text-align: justify;
+  letter-spacing: 0.2em;
+  line-height: 1.5em;
+}
+.side-right {
+  width: 40%;
+}
+.side-right-container {
+  text-align: center;
+}
+.socmed-icon {
+  margin: 1em 0;
+  display: flex;
+  justify-content: center;
+  gap: 2em;
+}
+.socmed-icon a {
+  color: light-dark(#080014, #f60461);
+  width: 5%;
+}
+.socmed-icon a:hover {
+  border: 1px solid #f60461;
+  border-radius: 50px;
+  color: light-dark(#080014, #fd8686);
+  transition: all 0.5s linear;
+}
+.side-right img {
+  width: 100%;
+  background-size: cover;
+  border-radius: 100%;
+}
+
+/* =============== Responsive ============== */
+@media screen and (max-width: 870px) {
+  .container {
+    width: 90%;
+  }
+  .info {
+    display: block;
+  }
+  .subtext {
+    text-align: left;
+    display: block;
+    margin-left: 2em;
+  }
+  .newsletter {
+    width: 100%;
+    flex-shrink: 0;
+  }
+  .newsletter form input,
+  .newsletter form button {
+    width: 70%;
+  }
+  .newsletter form button {
+    width: 20%;
+  }
+  .socmed {
+    width: 100%;
+    margin-top: 2em;
+    justify-items: flex-start;
+    text-align: left;
+    margin-left: 2em;
+  }
+
+  /* =============== Portfolio =============== */
+  .cards {
+    width: 100%;
+  }
+}
