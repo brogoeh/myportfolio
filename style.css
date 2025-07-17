@@ -12,7 +12,9 @@ html {
   scroll-padding: var(--scroll-padding, 10em);
 }
 body {
-  background-color: light-dark(#fffafa, #080014);
+  background-image: url('/image/galaxy.jpg');
+  color: #fffafa;
+  /* background-color: light-dark(#fffafa, #080014); */
   /* background: linear-gradient(45deg, rgba(255, 0, 123, 0.08) 0%, rgb(255, 0, 123) 50%, rgba(255, 0, 123, 0.08) 100%); */
 }
 .container {
@@ -28,7 +30,7 @@ body {
 .logo {
   width: 50%;
   display: flex;
-  background-color: pink;
+  background-color: rgb(255, 192, 203);
   align-items: center;
   padding: 0 2em;
   z-index: 999;
@@ -57,7 +59,8 @@ body {
   margin: 0.5em 0;
 }
 .menu ul li a {
-  color: light-dark(#080014, #bbfd04);
+  /* color: light-dark(#080014, #bbfd04); */
+  color: light-dark(#bbfd04, #bbfd04);
   text-decoration: none;
 }
 .menu ul li a:hover {
@@ -74,7 +77,8 @@ body {
   max-width: 500px;
   text-align: center;
   margin: 2.5rem auto;
-  color: light-dark(#080014, #fffafa);
+  /* color: light-dark(#080014, #fffafa); */
+  color: light-dark(#bbfd04, #fffafa);
   font-size: 1.5em;
   word-spacing: 0.1em;
   letter-spacing: 0.1em;
@@ -134,7 +138,8 @@ footer {
 .subtext {
   display: flex;
   justify-content: center;
-  color: light-dark(#080014, #fffafa);
+  /* color: light-dark(#080014, #fffafa); */
+  color: light-dark(#fffafa, #fffafa);
   text-transform: uppercase;
   letter-spacing: 0.1em;
   margin-bottom: 2em;
@@ -182,7 +187,8 @@ footer {
   letter-spacing: 0.1em;
   font-size: 14px;
   text-decoration: none;
-  color: light-dark(#080014, #fffafa);
+  /* color: light-dark(#080014, #fffafa); */
+  color: light-dark(#fffafa, #fffafa);
 }
 .socmed a:hover {
   color: #fd8686;
@@ -285,7 +291,7 @@ h1:before {
 }
 
 .info-site {
-  width: 20%;
+  width: 80%;
   display: flex;
   margin: 0 auto;
   justify-content: flex-start;
@@ -299,6 +305,7 @@ h1:before {
 }
 .info-site p {
   font-size: 0.5em;
+  text-align: left;
 }
 
 /* ================= About ================= */
@@ -361,7 +368,8 @@ a.cta:hover {
   flex-shrink: 0;
 }
 .socmed-icon a {
-  color: light-dark(#080014, #f60461);
+  /* color: light-dark(#080014, #f60461); */
+  color: light-dark(#f60461, #f60461);
 }
 .socmed-icon a:hover {
   box-shadow: 1px 0px 25px 0px #8102c5;
@@ -374,7 +382,7 @@ a.cta:hover {
   border-radius: 100%;
   border: 2px solid #fffafa;
   box-shadow: 5px 0 30px 5px #8102c5;
-  mix-blend-mode: difference;
+  /* mix-blend-mode: multiply; */
   animation: bounce 5s ease-in-out infinite;
 }
 
@@ -405,7 +413,8 @@ a.cta:hover {
   text-transform: uppercase;
   font-size: 14px;
   letter-spacing: 0.1em;
-  color: light-dark(#080014, #fffafa);
+  /* color: light-dark(#080014, #fffafa); */
+  color: light-dark(#fffafa, #fffafa);
   width: 100%;
   padding-top: 3rem;
 }
