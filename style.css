@@ -284,6 +284,23 @@ h1:before {
   filter: blur(10px);
 }
 
+.info-site {
+  width: 20%;
+  display: flex;
+  margin: 0 auto;
+  justify-content: flex-start;
+  align-items: center;
+  color: #fffafa;
+  gap: 1.2em;
+  line-height: 1em;
+}
+.info-site > i {
+  font-size: 0.5em;
+}
+.info-site p {
+  font-size: 0.5em;
+}
+
 /* ================= About ================= */
 
 .wrapper {
@@ -314,7 +331,7 @@ h1:before {
   letter-spacing: 0.2em;
   line-height: 1.5em;
 }
-.cta {
+a.cta {
   display: inline-block;
   background-color: #bbfd04;
   color: light-dark(#080014, #080014);
@@ -323,6 +340,11 @@ h1:before {
   margin-top: 2em;
   text-transform: uppercase;
   font-weight: bold;
+  text-decoration: none;
+}
+a.cta:hover {
+  background-color: #fd8686;
+  color: #080014;
 }
 .side-right {
   width: 40%;
@@ -449,11 +471,12 @@ h1:before {
     font-size: 1.5em;
     margin-top: 0.2em;
   }
-  .cta {
+  a.cta {
     margin-bottom: 2.5em;
     padding: 1em 1.5em;
     justify-self: center;
     display: flex;
+    text-decoration: none;
   }
   .side-right {
     width: 80%;
