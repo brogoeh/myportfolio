@@ -21,6 +21,7 @@ const cards = document.querySelectorAll('.cards');
 all.addEventListener('click', () => {
   cards.forEach((card) => {
     card.style.display = 'flex';
+    card.classList.add('fade');
   });
 });
 
@@ -29,8 +30,9 @@ web.addEventListener('click', () => {
     const c = card.classList.contains('web');
     if (c) {
       card.style.display = 'block';
-      console.log(card);
+      card.classList.add('fade');
     } else {
+      card.classList.remove('fade');
       card.style.display = 'none';
     }
   });
@@ -40,8 +42,9 @@ ilus.addEventListener('click', () => {
     const c = card.classList.contains('illustration');
     if (c) {
       card.style.display = 'block';
-      console.log(card);
+      card.classList.add('fade');
     } else {
+      card.classList.remove('fade');
       card.style.display = 'none';
     }
   });
