@@ -220,7 +220,26 @@ h1:before {
   left: 100%;
   transform: translateY(-50%);
 }
-
+.category {
+  display: flex;
+  justify-content: space-between;
+  width: 20%;
+  gap: 1em;
+  margin: 0 auto;
+  padding-bottom: 2em;
+}
+.category > button {
+  padding: 0.5em 1.3em;
+  width: 100%;
+  background-color: #080014;
+  border-radius: 10px;
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+.category > button:hover {
+  box-shadow: 1px 0 20px 3px #f60461;
+  border: 1px solid #fffafa;
+}
 .card-container {
   width: 100%;
   display: flex;
@@ -505,5 +524,10 @@ a.cta:hover {
   }
   .foot-text {
     font-size: 0.8em;
+  }
+  /* ======== portfolio ======= */
+  .category {
+    justify-content: center;
+    width: 100%;
   }
 }

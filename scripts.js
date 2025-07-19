@@ -10,3 +10,39 @@ linkEl.forEach((link) => {
 const menuEl = document.querySelector('.menu');
 const navigationHeight = navigation.offsetHeight;
 document.documentElement.style.setProperty('--scroll-pading', navigationHeight + ' px');
+
+//====================== button category ===================
+
+const all = document.querySelector('#all');
+const web = document.querySelector('#web');
+const ilus = document.querySelector('#illustration');
+const cards = document.querySelectorAll('.cards');
+
+all.addEventListener('click', () => {
+  cards.forEach((card) => {
+    card.style.display = 'flex';
+  });
+});
+
+web.addEventListener('click', () => {
+  cards.forEach((card) => {
+    const c = card.classList.contains('web');
+    if (c) {
+      card.style.display = 'block';
+      console.log(card);
+    } else {
+      card.style.display = 'none';
+    }
+  });
+});
+ilus.addEventListener('click', () => {
+  cards.forEach((card) => {
+    const c = card.classList.contains('illustration');
+    if (c) {
+      card.style.display = 'block';
+      console.log(card);
+    } else {
+      card.style.display = 'none';
+    }
+  });
+});
