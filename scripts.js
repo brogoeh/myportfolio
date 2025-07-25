@@ -32,7 +32,6 @@ web.addEventListener('click', () => {
       card.style.display = 'block';
       card.classList.add('fade');
     } else {
-      card.classList.remove('fade');
       card.style.display = 'none';
     }
   });
@@ -44,7 +43,6 @@ ilus.addEventListener('click', () => {
       card.style.display = 'block';
       card.classList.add('fade');
     } else {
-      card.classList.remove('fade');
       card.style.display = 'none';
     }
   });
